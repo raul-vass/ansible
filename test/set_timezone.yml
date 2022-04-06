@@ -10,7 +10,6 @@
   - name: Show date
     command: date
     register: reg
-  - debug: msg="{{reg.stdout}}"
 
   - name: Set timezone to Europe/Madrid
     timezone:
@@ -19,4 +18,7 @@
   - name: Show date 2
     command: date
     register: reg
-  - debug: msg="{{reg.stdout}}"
+    
+  - name: "Output test results"
+    debug: 
+      msg: "{{reg.stdout}}"
