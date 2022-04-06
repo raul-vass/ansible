@@ -16,3 +16,8 @@
       copy:
         src: /tmp/README.md
         dest: /
+ 
+    - name: display multiple file contents
+      debug: var=item
+      with_file:
+        - "/tmp/README.md"
