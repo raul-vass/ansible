@@ -21,4 +21,4 @@
       command: cat /tmp/README.md
       register: result
       debug:
-        msg: {{ result.stdout }}
+        msg: "{{ result.stdout }}"
