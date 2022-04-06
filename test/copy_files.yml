@@ -1,12 +1,14 @@
 - name: Hello Raul Sample
   hosts: all
   tasks:
-    - name: List files
-      command: ls -l
+    - name: Show date
+      command: date
       register: reg
+      
+    - name: "Output test results"
       debug: 
         msg: "{{reg.stdout}}"
-      
+
     - name: Store README file into /tmp
       fetch:
         src: /tmp/README.md
