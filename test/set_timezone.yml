@@ -19,6 +19,11 @@
     command: date
     register: reg
     
+  - name: "Show date 2 of test results to Tower Workflows"
+    set_stats:
+      data:
+        var_test:  "{{ reg.stdout }}"
+    
   - name: "Output test results"
     debug: 
       msg: "{{reg.stdout}}"
