@@ -1,0 +1,6 @@
+- name: Test vars_extra
+  hosts: all
+  tasks:
+    - name: "{{ name }}"
+      debug:
+        msg: "Testing extra vars OK!"
