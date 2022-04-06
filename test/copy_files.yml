@@ -9,10 +9,10 @@
         
     - name: Create new file
       copy:
-        dest: "/tmp"
+        dest: "/tmp/README.md"
         content: HELLO WORD
 
     - name: Copy README file into remote host /tmp
       copy:
-        src: ./README.md
-        dest: /tmp
+        src: /tmp/README.md
+        dest: /
