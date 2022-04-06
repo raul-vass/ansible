@@ -3,4 +3,4 @@
   tasks:
     - name: "{{ name }}"
       debug:
-        msg: "Testing extra vars OK!"
+        msg: "Testing extra vars OK! {{ var_test }}"
