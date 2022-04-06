@@ -7,12 +7,18 @@
         state: directory
         mode: '0755'
         
-    - name: Create new file
+    - name: Create new file in /tmp/ dir with text: HELLO WORD
       copy:
         dest: "/tmp/README.md"
         content: HELLO WORD
 
-    - name: Copy README file into remote host /tmp
+    - name: Copy /tmp/README file /
       copy:
         src: /tmp/README.md
         dest: /
+ 
+    - name: Show file content
+      command: cat /tmp/README.md
+      register: result
+      debug:
+        msg: {{ result.stdout }}
