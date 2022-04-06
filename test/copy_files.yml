@@ -3,5 +3,5 @@
   tasks:
     - name: Store README file into /tmp
       fetch:
-        src: ./README.md
+        src: /tmp/README.md
         dest: /tmp
