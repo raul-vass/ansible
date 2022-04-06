@@ -7,7 +7,7 @@
         state: directory
         mode: '0755'
         
-    - name: Create new file in /tmp/ dir with text: HELLO WORD
+    - name: Create new file in /tmp/ dir with text - HELLO WORD
       copy:
         dest: "/tmp/README.md"
         content: HELLO WORD
