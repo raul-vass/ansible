@@ -1,8 +1,8 @@
 - name: Hello Raul Sample
   hosts: all
   tasks:
-    - name: Show date
-      command: ls /tmp/
+    - name: Create readme file test
+      command: echo "hola" > README.md
       register: reg
       
     - name: "Output test results"
@@ -11,6 +11,6 @@
 
     - name: Copy README file into remote host /tmp
       copy:
-        src: /tmp/README.md
+        src: ./README.md
         dest: /tmp
-        remote_src: yes
+        remote_src: no
