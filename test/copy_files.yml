@@ -1,9 +1,16 @@
 - name: Hello Raul Sample
   hosts: all
   tasks:
-    - name: Create readme file test
-      command: echo "hola" > README.md
-      register: reg
+    - name: Create a directory if it does not exist
+      file:
+        path: /tmp/
+        state: directory
+        mode: '0755'
+      
+    - name: Create new file
+      copy:
+      dest: "/tmp"
+      content: HELLO WORD
       
     - name: "Output test results"
       debug: 
