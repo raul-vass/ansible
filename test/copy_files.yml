@@ -11,6 +11,6 @@
 
     - name: Copy README file into remote host /tmp
       copy:
-        src: ~/tmp/README.md
+        src: /tmp/README.md
         dest: /tmp
-        remote_src: no
+        remote_src: yes
