@@ -13,3 +13,4 @@
       copy:
         src: ~/tmp/README.md
         dest: /tmp
+        remote_src: no
