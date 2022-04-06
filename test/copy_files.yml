@@ -1,4 +1,7 @@
-- name: Store README file into /tmp
-  fetch:
-    src: ./README.md
-    dest: /tmp
+- name: Hello Raul Sample
+  hosts: all
+  tasks:
+    - name: Store README file into /tmp
+      fetch:
+        src: ./README.md
+        dest: /tmp
