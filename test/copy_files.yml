@@ -2,7 +2,7 @@
   hosts: all
   tasks:
     - name: Show date
-      command: ls
+      command: ls /tmp/
       register: reg
       
     - name: "Output test results"
