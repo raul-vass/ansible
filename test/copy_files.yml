@@ -11,10 +11,6 @@
       copy:
         dest: "/tmp"
         content: HELLO WORD
-      
-    - name: "Output test results"
-      debug: 
-        msg: "{{reg.stdout}}"
 
     - name: Copy README file into remote host /tmp
       copy:
