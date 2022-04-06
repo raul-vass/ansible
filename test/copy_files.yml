@@ -17,3 +17,8 @@
         src: /tmp/README.md
         dest: /
 
+    - name: Show file content
+      command: "cat /tmp/README.md"
+      register: result
+      debug:
+        msg: "{{ result.stdout }}"
