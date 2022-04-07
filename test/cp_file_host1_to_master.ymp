@@ -1,0 +1,9 @@
+---
+- name: Copy file Host-1
+  hosts: all
+
+  tasks:
+    - name: Fetch the file from the Host-1  to master
+      run_once: yes
+      fetch: src=/tmp/file_to_copy.txt dest=/tmp/ flat=yes
+      when: "{{ inventory_hostname == '{{ host_name }}' }}"
