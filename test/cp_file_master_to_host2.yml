@@ -7,7 +7,7 @@
         msg: "(Host 2) Local_path: {{ local_path }}. Master_file_path {{ stat_dest }}."
     
     - debug:
-       msg: "{{ stat_dest.split('/') }}"
+        msg: "{{ stat_dest.split('/') }}"
     
     - name: Copy the file from master to Host-2
       copy:
