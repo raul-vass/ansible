@@ -15,7 +15,7 @@
     - name: Create new file in /tmp/ dir with text - HELLO WORD
       copy:
         dest: "/tmp/README-raul.md"
-        content: "{{ content }}"
+        content: "{{ text }}"
 
     - name: Copy /tmp/README file /
       copy:
