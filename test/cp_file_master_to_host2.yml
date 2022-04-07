@@ -4,7 +4,7 @@
   tasks:
     - name: Prints variables
       debug:
-        msg: "Dst var: {{ dst }}"
+        msg: "Dst var: {{ dst }}. Stat_dest {{ stat_dest }}"
     
     - name: Copy the file from master to Host-2
       copy:
