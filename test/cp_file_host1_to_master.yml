@@ -7,13 +7,13 @@
       run_once: yes
       fetch: 
         src: "{{ remote_path }}{{ remote_filename }}"
-        dest: "{{ dest }}"
+        dest: "{{ local_path }}"
         flat: yes
       when: "{{ inventory_hostname == host_name }}"
     
     - name: "Pass file_name param to stats"
       set_stats:
         data:
-          stat_dest: "{{ dest }}"
+          stat_dest: "{{ local_path }}"
       when: "{{ inventory_hostname == host_name }}"
   
