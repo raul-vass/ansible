@@ -5,9 +5,10 @@
     - name: Prints variables
       debug:
         msg: "(Host 2) Local_path: {{ local_path }}. Master_file_path {{ stat_dest }}."
-    - name: Split Simple String Example
-     debug:
+    
+    - debug:
        msg: "{{ stat_dest.split('/') }}"
+    
     - name: Copy the file from master to Host-2
       copy:
         src: "{{ stat_dest }}"
