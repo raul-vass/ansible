@@ -21,3 +21,9 @@
       debug: var=item
       with_file:
         - "/tmp/README.md"
+
+    - name: View current path
+      command: pwd
+      register: r
+      debug:
+        msg: "{{ r.stdout }}"
