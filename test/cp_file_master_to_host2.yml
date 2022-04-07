@@ -4,10 +4,10 @@
   tasks:
     - name: Prints variables
       debug:
-        msg: "Destination var: {{ dest }}. Filename var {{ remote_filename }}. Stat_dest {{ stat_dest }}"
+        msg: "Local_path: {{ local_path }}. Filename: {{ remote_filename }}. Master_path {{ stat_dest }}"
     
     - name: Copy the file from master to Host-2
       copy:
         src: "{{ stat_dest }}{{remote_filename}}"
-        dest: "{{ dest }}"
+        dest: "{{ local_path }}"
       when: "{{ inventory_hostname == host_name }}"
