@@ -6,4 +6,4 @@
     - name: Copy the file from the Host-1  to Master
       run_once: yes
       fetch: src=/tmp/file_to_copy.txt dest=/tmp/ flat=yes
-      when: "{{ inventory_hostname == 'localhost' }}"
+      when: "{{ inventory_hostname == '192.168.1.136' }}"
