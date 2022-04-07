@@ -10,7 +10,7 @@
         dest: "{{ dst }}"
         flat: yes
       set_stats:
-        data:
-          stat_dest: "{{ dst }}"
+            data:
+              stat_dest: "{{ dst }}"
       when: "{{ inventory_hostname == host_name }}"
   
