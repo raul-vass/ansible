@@ -4,10 +4,10 @@
   tasks:
     - name: Prints variables
       debug:
-        msg: "Dst var: {{ dst }}. Stat_dest {{ stat_dest }}"
+        msg: "Dst var: {{ source }}. Stat_dest {{ stat_dest }}"
     
     - name: Copy the file from master to Host-2
       copy:
-        src: "{{dst}}file_to_copy.txt"
+        src: "{{source}}file_to_copy.txt"
         dest: "{{ stat_dest }}"
       when: "{{ inventory_hostname == host_name }}"
