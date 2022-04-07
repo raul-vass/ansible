@@ -3,7 +3,8 @@
 
   tasks:
     - name: Prints variables
-     debug: "msg=Dst var: '{{ dst }}'. Stat_dest var: '{{ stat_dest }}'"
+      debug:
+        msg: "Dst var: {{ dst }}"
     
     - name: Copy the file from master to Host-2
       copy:
