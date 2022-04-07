@@ -2,8 +2,8 @@
   hosts: all
   tasks:
   
-    - name: Show current dir
-      command: pwd
+    - name: Show /tmp/README.md content
+      command: cat /tmp/README.md
       register: r
         
     - name: Create a directory if it does not exist
