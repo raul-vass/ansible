@@ -15,5 +15,5 @@
     - name: "Pass fetch output to parameter"
       set_stats:
         data:
-          fetch_output:  "{{ result.stdout }}"
+          fetch_output: "{{ src }}"
   
