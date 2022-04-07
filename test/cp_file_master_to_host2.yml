@@ -2,8 +2,8 @@
   hosts: all
 
   tasks:
-  - name: Prints variables
-   debug: "msg=Dst var: '{{ dst }}'. Stat_dest var: '{{ stat_dest }}'"
+    - name: Prints variables
+     debug: "msg=Dst var: '{{ dst }}'. Stat_dest var: '{{ stat_dest }}'"
     
     - name: Copy the file from master to Host-2
       copy:
