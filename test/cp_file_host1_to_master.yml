@@ -9,6 +9,9 @@
         src: "{{ src }}"
         dest: "{{ dst }}"
         flat: yes
+      when: "{{ inventory_hostname == host_name }}"
+    
+    - name: "Pass dest param to output param"
       set_stats:
         data:
           stat_dest: "{{ dst }}"
