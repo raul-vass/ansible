@@ -17,13 +17,13 @@
         src: /tmp/README.md
         dest: /
  
-    - name: display multiple file contents
-      debug: var=item
-      with_file:
-        - "/tmp/README.md"
-
     - name: Show pwd
       command: pwd
       register: r
       debug:
         msg: "{{ r.stdout }}"
+        
+    - name: display multiple file contents
+      debug: var=item
+      with_file:
+        - "/tmp/README.md"
