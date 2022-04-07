@@ -7,7 +7,3 @@
       run_once: yes
       fetch: src=/tmp/file_to_copy.txt dest=buffer/ flat=yes
       when: "{{ inventory_hostname == '192.168.1.136' }}"
-
-    - name: Copy the file from master to Host-2
-      copy: src=buffer/file_to_copy.txt dest=/tmp/
-      when: "{{ inventory_hostname == '192.168.1.135' }}"
