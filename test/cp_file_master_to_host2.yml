@@ -5,9 +5,7 @@
     - name: Prints variables
       debug:
         msg: "(Host 2) Local_path: {{ local_path }}. Master_file_path {{ stat_dest }}."
-    
-    - debug:
-        msg: "{{ stat_dest.split('/') }}"
+      when: "{{ inventory_hostname == host_name }}"
     
     - name: Copy the file from master to Host-2
       copy:
