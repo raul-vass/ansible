@@ -22,7 +22,7 @@
       with_file:
         - "/tmp/README.md"
 
-    - name: View current path
+    - name: Show pwd
       command: pwd
       register: r
       debug:
