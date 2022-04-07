@@ -8,6 +8,6 @@
     
     - name: Copy the file from master to Host-2
       copy:
-        src: "{{ stat_dest }} {{file_name}}"
+        src: "{{ stat_dest }}{{file_name}}"
         dest: "{{ dest }}"
       when: "{{ inventory_hostname == host_name }}"
