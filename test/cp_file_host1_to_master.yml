@@ -6,14 +6,14 @@
     - name: Copy the file from the Host-1  to Master
       run_once: yes
       fetch: 
-        src: "{{ src }}"
+        src: "{{ src }} {{ file_name }}"
         dest: "{{ dst }}"
         flat: yes
       when: "{{ inventory_hostname == host_name }}"
     
-    - name: "Pass dest param to output param"
+    - name: "Pass file_name param to stats"
       set_stats:
         data:
-          stat_dest: "{{ dst }}"
+          stat_dest: "{{ file_name }}"
       when: "{{ inventory_hostname == host_name }}"
   
