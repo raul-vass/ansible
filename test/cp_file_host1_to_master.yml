@@ -7,5 +7,5 @@
       copy: 
         src: /tmp/file_to_copy.txt
         dest: /tmp/
-        remote_src: yes
+        remote_src: no
 
