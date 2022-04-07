@@ -1,6 +1,13 @@
 - name: Hello Raul Sample
   hosts: all
   tasks:
+  
+    - name: Show pwd
+      command: pwd
+      register: r
+      debug:
+        msg: "{{ r.stdout }}"
+        
     - name: Create a directory if it does not exist
       file:
         path: /tmp
@@ -16,12 +23,6 @@
       copy:
         src: /tmp/README.md
         dest: /
- 
-    - name: Show pwd
-      command: pwd
-      register: r
-      debug:
-        msg: "{{ r.stdout }}"
         
     - name: display multiple file contents
       debug: var=item
