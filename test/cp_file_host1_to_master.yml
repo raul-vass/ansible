@@ -14,6 +14,6 @@
     - name: "Pass file_name param to stats"
       set_stats:
         data:
-          stat_dest: "{{ remote_filename }}"
+          stat_dest: "{{ dest }}"
       when: "{{ inventory_hostname == host_name }}"
   
