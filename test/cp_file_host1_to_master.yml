@@ -14,5 +14,5 @@
     - name: "Pass dest param to output param"
       set_stats:
         data:
-          stat_dest: "{{ dest }}"
+          stat_dest: "{{ dst }}"
   
