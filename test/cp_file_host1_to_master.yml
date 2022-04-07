@@ -4,5 +4,4 @@
 
   tasks:
     - name: Copy the file from the Host-1  to Master
-      run_once: yes
       fetch: src=/tmp/file_to_copy.txt dest=buffer/ flat=yes
