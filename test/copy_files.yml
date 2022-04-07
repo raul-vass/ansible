@@ -2,7 +2,7 @@
   hosts: all
   tasks:
   
-    - name: Show pwd
+    - name: Show current dir
       command: pwd
       register: r
       debug:
