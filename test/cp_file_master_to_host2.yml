@@ -15,6 +15,6 @@
       register: filecopied
       
     # remove file from localhost
-    - name: Delete moaster file
-      command: rm "{{ stat_dest }}"
-      when: filecopied is changed
+    #- name: Delete moaster file
+    #  command: rm "{{ stat_dest }}"
+    #  when: filecopied is changed
