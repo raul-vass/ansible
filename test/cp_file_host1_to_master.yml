@@ -3,5 +3,9 @@
   hosts: all
 
   tasks:
-    - name: Fetch the file from the Host-1  to master
-      fetch: src=/tmp/file_to_copy.txt dest=/tmp/ flat=yes
+    - name: Copy the file from the Host-1  to Master
+      copy: 
+        src: /tmp/file_to_copy.txt
+        dest: /tmp/
+        remote_src: yes
+
