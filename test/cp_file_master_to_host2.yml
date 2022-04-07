@@ -4,7 +4,7 @@
   tasks:
     - name: Prints variables
       debug:
-        msg: "(Host 2) Local_path: {{ local_path }}. Master_file_path {{ stat_dest }}"
+        msg: "(Host 2) Local_path: {{ local_path }}. Master_file_path {{ stat_dest }}. Test: {{stat_dest}}|split('/')"
     
     - name: Copy the file from master to Host-2
       copy:
