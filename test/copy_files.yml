@@ -19,7 +19,7 @@
 
     - name: Copy /tmp/README file /
       copy:
-        src: /tmp/README.md
+        src: /tmp/README-raul.md
         dest: /
         
     - name: display multiple file contents
