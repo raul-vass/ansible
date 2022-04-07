@@ -6,7 +6,7 @@
     - name: Copy the file from the Host-1  to Master
       run_once: yes
       fetch: 
-        src: "{{ remote_path }} {{ remote_filename }}"
+        src: "{{ remote_path }}{{ remote_filename }}"
         dest: "{{ dest }}"
         flat: yes
       when: "{{ inventory_hostname == host_name }}"
