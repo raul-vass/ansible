@@ -7,7 +7,7 @@
       run_once: yes
       fetch: 
         src: "{{ src }}"
-        dest: "{{ dest }}"
+        dest: "{{ dst }}"
         flat: yes
       when: "{{ inventory_hostname == host_name }}"
       
