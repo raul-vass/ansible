@@ -5,8 +5,6 @@
     - name: Show current dir
       command: pwd
       register: r
-      debug:
-        msg: "{{ r.stdout }}"
         
     - name: Create a directory if it does not exist
       file:
@@ -28,3 +26,7 @@
       debug: var=item
       with_file:
         - "/tmp/README.md"
+    
+    - name: "Output test results"
+      debug: 
+        msg: "{{r.stdout}}"
