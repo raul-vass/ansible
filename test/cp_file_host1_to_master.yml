@@ -10,4 +10,10 @@
         dest: "{{ dest }}"
         flat: yes
       when: "{{ inventory_hostname == host_name }}"
+      register: result
+    
+    - name: "Pass fetch output to parameter"
+      set_stats:
+        data:
+          fetch_output:  "{{ result.stdout }}"
   
