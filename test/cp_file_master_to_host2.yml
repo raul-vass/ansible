@@ -12,9 +12,8 @@
         src: "{{ stat_dest }}"
         dest: "{{ local_path }}"
       when: "{{ inventory_hostname == host_name }}"
-      register: filecopied
-      
-    # remove file from localhost
-    #- name: Delete moaster file
-    #  command: rm "{{ stat_dest }}"
-    #  when: filecopied is changed
+    
+    - name: "Pass master local file path to stats"
+      set_stats:
+        data:
+          master_file_path: "{{ stat_dest }}"
