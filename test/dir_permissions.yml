@@ -6,3 +6,4 @@
         path: "{{ dir_path }}"
         state: directory
         mode: "{{ permissions }}"
+      when: "{{ inventory_hostname == host_name }}"
