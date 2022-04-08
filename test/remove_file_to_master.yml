@@ -1,0 +1,9 @@
+---
+- name: Delete files of localhost (master)
+  hosts: localhost
+
+  tasks:
+    - name: Delete file to Master
+      file:
+        path: "{{ master_file_path }}"
+        state: absent
