@@ -3,4 +3,4 @@
   tasks:
     - name: API Asnible extra vars
       debug:
-        msg: "Variable: {{ enviroment }} | Password: {{ Password }}"
+        msg: "Variable: {{ enviroment }} | Password: {{ password }}"
