@@ -3,4 +3,4 @@
   tasks:
     - name: API Asnible extra vars
       debug:
-        msg: "Variable: {{ enviroment }} | Punto de montaje: {{ mount_point }} |  Usuario red: {{ network_user }} | Contraseña red: {{ network_pass }} "
+        msg: "Variable: {{ enviroment }} | Punto de montaje: {{ mount_point }} |  Usuario red: {{ network_user }} |  Grupo red: {{ network_group }} | Contraseña red: {{ network_pass }} "
