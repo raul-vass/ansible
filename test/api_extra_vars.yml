@@ -7,7 +7,7 @@
     - name: Check ENV
       assert:
         that:
-        - default_env == env
+        - default_env != env
       
     - name: API Asnible extra vars
       debug:
