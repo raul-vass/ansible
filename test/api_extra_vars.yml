@@ -1,11 +1,11 @@
 - name: API test
   hosts: localhost
   vars:
-    env: "DESARROLLO"
-    s: "{{ stage }}"
+    default_env: "DESARROLLO"
+    env: "{{ stage }}"
   tasks:
     - name: Check ENV
-      failed_when: s != env
+      failed_when: "{{ default_env }}" != "{{ env }}"
       
     - name: API Asnible extra vars
       debug:
