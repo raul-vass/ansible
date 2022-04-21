@@ -1,7 +1,7 @@
 - name: API test
   hosts: localhost
   vars:
-    env: 'DESARROLLO'
+    env: "DESARROLLO"
     s: "{{ stage }}"
   tasks:
     - name: Check ENV
