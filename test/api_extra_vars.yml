@@ -2,9 +2,10 @@
   hosts: localhost
   vars:
     env: 'DESARROLLO'
+    s: "{{ stage }}"
   tasks:
     - name: Check ENV
-      failed_when: "{{ stage }}" != env
+      failed_when: s != env
       
     - name: API Asnible extra vars
       debug:
