@@ -1,5 +1,6 @@
-- name: API test
+- name: Steps
   hosts: localhost
-    - name: API Asnible extra vars
+   tasks:
+    - name: Steps - API
       debug:
         msg: "Variable: {{ enviroment }} | Release parcial: {{ partial_release }} | Orden Entorno: {{ order_env }} | Punto de montaje: {{ mount_point }} |  Usuario red: {{ network_user }} |  Grupo red: {{ network_group }} | Contraseña red: {{ network_pass }} "
