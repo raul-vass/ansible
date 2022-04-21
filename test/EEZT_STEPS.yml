@@ -3,4 +3,4 @@
   tasks:
     - name: Steps - API
       debug:
-        msg: "Host {{ansible_hostname}} | (extra var) ENV: {{ enviroment }} | Release parcial: {{ partial_release }} | Orden Entorno: {{ order_env }} | Punto de montaje: {{ mount_point }} |  Usuario red: {{ network_user }} |  Grupo red: {{ network_group }} | Contraseña red: {{ network_pass }} "
+        msg: "Host {{inventory_hostname}} | (extra var) ENV: {{ enviroment }} | Release parcial: {{ partial_release }} | Orden Entorno: {{ order_env }} | Punto de montaje: {{ mount_point }} |  Usuario red: {{ network_user }} |  Grupo red: {{ network_group }} | Contraseña red: {{ network_pass }} "
