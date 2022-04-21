@@ -1,5 +1,5 @@
 - name: Steps
-  hosts: localhost
+  hosts: all
   tasks:
     - name: Steps - API
       debug:
