@@ -5,7 +5,9 @@
     env: "{{ stage }}"
   tasks:
     - name: Check ENV
-      failed_when: "{{ default_env  ==  env }}"
+      assert:
+        that:
+        - default_env == env
       
     - name: API Asnible extra vars
       debug:
