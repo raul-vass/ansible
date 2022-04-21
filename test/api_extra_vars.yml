@@ -2,7 +2,7 @@
   hosts: localhost
   tasks:
     - name: Check ENV
-      failed_when: "{{ enviroment != 'DESARROLLO'}}" 
+      failed_when: "{{ enviroment != DESARROLLO}}" 
       
     - name: API Asnible extra vars
       debug:
