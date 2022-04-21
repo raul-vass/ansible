@@ -1,6 +1,0 @@
-- name: API test
-  hosts: localhost
-  tasks:
-    - name: API Asnible extra vars
-      debug:
-        msg: "Enviroment: {{ enviroment }} | Hostname: {{ host_name }}"
