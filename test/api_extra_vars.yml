@@ -2,13 +2,13 @@
   hosts: localhost
   vars:
     default_env: "DESARROLLO"
-    env: "{{ stage }}"
+    env: "{{ enviroment }}"
   tasks:
     - name: Check ENV
       assert:
         that:
-        - default_env != env
+        - default_env == env
       
     - name: API Asnible extra vars
       debug:
-        msg: "Variable: {{ enviroment }} | Punto de montaje: {{ mount_point }} |  Usuario red: {{ network_user }} |  Grupo red: {{ network_group }} | Contraseña red: {{ network_pass }} "
+        msg: "Variable: {{ enviroment }} | Release parcial: {{ partial_release }} | Orden Entorno: {{ order_env }} | Punto de montaje: {{ mount_point }} |  Usuario red: {{ network_user }} |  Grupo red: {{ network_group }} | Contraseña red: {{ network_pass }} "
