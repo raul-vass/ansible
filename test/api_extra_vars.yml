@@ -1,6 +1,9 @@
 - name: API test
   hosts: localhost
   tasks:
+    - name: Check ENV
+      failed_when: {{ enviroment }} != 'DESARROLLO'
+      
     - name: API Asnible extra vars
       debug:
         msg: "Variable: {{ enviroment }} | Punto de montaje: {{ mount_point }} |  Usuario red: {{ network_user }} |  Grupo red: {{ network_group }} | Contraseña red: {{ network_pass }} "
