@@ -3,7 +3,7 @@
   hosts: localhost
  
   tasks:
-    - name: Export a workflow job template named "{{ workflow_name }}" and all Credentials
+    - name: Export a workflow job template named  and all Credentials
       tower_export:
         workflow_job_templates: "{{ workflow_name }}"
         credential: 'all'
