@@ -3,6 +3,14 @@
   hosts: localhost
  
   tasks:
+    - name: Export all tower assets
+      tower_export:
+        all: True
+
+    - name: Export all inventories
+      tower_export:
+        inventory: 'all'
+      
     - name: Export a workflow job template named  and all Credentials
       tower_export:
         workflow_job_templates: "CIR_WEB_WORKFLOW"
