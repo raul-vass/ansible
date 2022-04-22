@@ -1,3 +1,0 @@
----
-- name: Copy file Host-1
-  hosts: all
