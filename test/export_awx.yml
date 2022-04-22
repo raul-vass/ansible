@@ -5,5 +5,5 @@
   tasks:
     - name: Export a workflow job template named  and all Credentials
       tower_export:
-        workflow_job_templates: "CIR_WEB_WORKFLOW""
+        workflow_job_templates: "CIR_WEB_WORKFLOW"
      
