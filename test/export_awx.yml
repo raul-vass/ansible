@@ -1,0 +1,8 @@
+- name: Export all tower assets
+  tower_export:
+    all: True
+
+- name: Export a workflow job template named "{{ workflow_name }}" and all Credentials
+  tower_export:
+    workflow_job_templates: "{{ workflow_name }}"
+    credential: 'all'
