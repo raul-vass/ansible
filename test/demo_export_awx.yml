@@ -1,3 +1,7 @@
+---
+- name: Copy file Host-1
+  hosts: localhost
+  
 - name: Export all tower assets
   tower_export:
     all: True
