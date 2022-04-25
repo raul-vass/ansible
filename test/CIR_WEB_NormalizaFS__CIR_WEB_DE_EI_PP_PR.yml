@@ -1,6 +1,6 @@
 
 - name: NormalizaFS__CIR_WEB_DE_EI_PP_PR
-  hosts: "{{inventory_hostname}}"
+  hosts: inventory_hostname
   tasks:
     - name: Nomrmalizar
       debug:
