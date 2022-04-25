@@ -1,7 +1,7 @@
 - name: API test
   hosts: localhost
   vars:
-    _default_enviroment: "{{ _default_env }}"
+    _default_enviroment: "{{ default_enviroment }}"
     _enviroment: "{{ enviroment }}"
   tasks:
     - name: Check ENV
