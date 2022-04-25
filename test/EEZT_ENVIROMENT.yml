@@ -8,3 +8,10 @@
       assert:
         that:
         - _default_enviroment == _enviroment
+        
+    - name: "add internal variable to extra_vars"
+      set_stats:
+        data:
+          instance_name: "{{ instance_name }}"
+          instance_version: "{{ instance_version }}"
+      when: "inventory_hostname == ansible_ssh_host"
