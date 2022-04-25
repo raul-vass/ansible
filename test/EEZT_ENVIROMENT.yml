@@ -1,0 +1,10 @@
+- name: API test
+  hosts: localhost
+  vars:
+    _default_enviroment: "{{ _default_env }}"
+    _enviroment: "{{ enviroment }}"
+  tasks:
+    - name: Check ENV
+      assert:
+        that:
+        - _default_enviroment == _enviroment
