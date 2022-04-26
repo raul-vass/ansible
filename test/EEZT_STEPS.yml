@@ -1,9 +1,13 @@
 - name: Steps
   hosts: all
+  vars:
+    _default_enviroment: "{{ default_enviroment }}"
+    _enviroment: "{{ enviroment }}"
+    
   tasks:
-    - name: Print hostname
-      debug:
-        msg: "Host: ansible_hostname"
+    - meta: end_play
+      when: _default_enviroment != _enviroment
+      
     - name: Steps - API
       debug:
         msg: "Host {{inventory_hostname}} | (extra var) ENV: {{ enviroment }} | Release parcial: {{ partial_release }} | Orden Entorno: {{ order_env }} | Punto de montaje: {{ mount_point }} |  Usuario red: {{ network_user }} |  Grupo red: {{ network_group }} | Contraseña red: {{ network_pass }} "
