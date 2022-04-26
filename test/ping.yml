@@ -3,7 +3,7 @@
   
   tasks:
     - name: show all the hosts matching the pattern, i.e. all but the group www
-      shell: ping "{{ item }}"
+      shell: ping -c 1 "{{ item }}"
       with_inventory_hostnames: all
 
     
