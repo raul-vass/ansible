@@ -6,5 +6,5 @@
       debug:
         msg: "{{ item }}"
       with_inventory_hostnames:
-        - all:
+        - all:=UUAA_GROUP_DESARROLLO
     
