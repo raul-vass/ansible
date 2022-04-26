@@ -1,8 +1,8 @@
-- name: Steps
+- name: Ping
   hosts: localhost
   
   tasks:
-    - name: show all the hosts matching the pattern, i.e. all but the group www
+    - name: Ping all the inventory hosts
       shell: ping -c 1 "{{ item }}"
       ignore_errors: true
       with_inventory_hostnames: all
