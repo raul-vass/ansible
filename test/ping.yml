@@ -6,6 +6,6 @@
       debug:
         msg: "{{ item }}"
       with_inventory_hostnames:
-        - all:!
+        - all:!NONE
 
     
