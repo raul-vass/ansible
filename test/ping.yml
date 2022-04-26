@@ -4,6 +4,7 @@
   tasks:
     - name: show all the hosts matching the pattern, i.e. all but the group www
       shell: ping -c 1 "{{ item }}"
+      ignore_errors: true
       with_inventory_hostnames: all
 
     
