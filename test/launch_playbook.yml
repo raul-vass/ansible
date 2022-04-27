@@ -2,7 +2,7 @@
   hosts: localhost
   tasks:
     - name: Download the Ansible code from the GitRepo
-      become: yes
+     become: yes
         git:
           repo: 'https://git@github.com:raul-vass/ansible.git'
           dest: "/tmp/git_clone/"
