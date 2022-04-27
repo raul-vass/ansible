@@ -1,5 +1,5 @@
 - name: Steps
-  hosts: "ansible_ssh_host"
+  hosts: ansible_ssh_host
   vars:
     _default_enviroment: "{{ default_enviroment }}"
     _enviroment: "{{ enviroment }}"
