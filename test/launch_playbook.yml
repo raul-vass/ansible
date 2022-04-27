@@ -4,6 +4,7 @@
     - name: Download the Ansible code from the GitRepo
       become: yes
       git:
-        repo: 'https://git@github.com:raul-vass/ansible.git'
+        repo: 'https://github.com/raul-vass/ansible.git'
         dest: "/tmp/git/"
-  
+        clone: yes
+
