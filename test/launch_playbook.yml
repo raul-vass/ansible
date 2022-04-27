@@ -5,5 +5,5 @@
       become: yes
       git:
         repo: 'https://git@github.com:raul-vass/ansible.git'
-        dest: "/tmp/"
+        dest: "/tmp/git/"
   
